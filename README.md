@@ -11,6 +11,7 @@ DogeCloud API
 MySQL
 主要就是这些，MySQL主要是记录当前使用证书的ID，其实也可以通过API去查询需要替换证书的一堆域名中的一个域名绑定的ID也可以，这样就省去了MySQL，但是如果这个域名某天不用了，那就需要修改源代码了，所以我用了数据库，数据库只有一个字段ID，存的就是DogeCloud证书的ID，更新完域名证书之后再把数据库里面的ID改成最新的就可以了
 
+当然你是先需要安装Python3.11.1，然后安装FastAPI和Uvicorn，具体的安装方法可以看FastAPI的文档
 启动方法
 ```
 uvicorn main:app --host="0.0.0.0" --port=5543 --reload
